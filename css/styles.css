@@ -181,7 +181,8 @@ img {
   text-decoration: none;
   align-items: center;
 
-  transition: fill var(--time-duration) var(--cubic-bezier), color var(--time-duration) var(--cubic-bezier);
+  transition: fill var(--time-duration) var(--cubic-bezier),
+    color var(--time-duration) var(--cubic-bezier);
 }
 
 .icon-mail {
@@ -555,8 +556,7 @@ img {
 
 .contact-link {
   text-decoration-line: none;
-    transition:  var(--time-duration) var(--cubic-bezier);
-
+  transition: var(--time-duration) var(--cubic-bezier);
 }
 
 .contacts-link:not(:last-child) {
@@ -627,6 +627,77 @@ img {
 
 .social-item + .social-item {
   margin-left: 10px;
+}
+
+/* Footer subscribe */
+.subscribe {
+  margin-left: 93px;
+}
+
+.subscribe-title {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white-color);
+}
+
+.subscribe-window {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  background-color: var(--footer-backgound);
+  color: var(--white-color);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  box-shadow: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+}
+
+.subscribe-window:focus {
+  border-color: var(--accent-color);
+}
+
+.subscribe-window::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-btn {
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  padding: 10px 28px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+
+  transition: background-color var(--time-duration) var(--cubic-bezier);
+}
+
+.subscribe-btn:hover {
+  background-color: var(--hero-btn-hover);
+}
+
+.subsribe-icon {
+  margin-left: 10px;
+  fill: var(--white-color);
 }
 
 /* portfolio html */
@@ -809,7 +880,7 @@ img {
   justify-content: center;
   align-items: center;
 
-  background:var(--background-main-color);
+  background: var(--background-main-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   fill: #000;
@@ -820,8 +891,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-transform: translate(-50%, -50%) scale(0.3) ;
-
+  transform: translate(-50%, -50%) scale(0.3);
 }
 
 .modal {
@@ -838,5 +908,31 @@ transform: translate(-50%, -50%) scale(0.3) ;
 
   background-color: var(--background-main-color);
 
-    transition: transform var(--time-duration) var(--cubic-bezier);
+  transition: transform var(--time-duration) var(--cubic-bezier);
 }
+
+textarea {
+  resize: none;
+}
+
+.form {
+  padding: 40px;
+}
+
+.modal-title {
+  margin: 0;
+  font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: var(--primary-text-color);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+}
+

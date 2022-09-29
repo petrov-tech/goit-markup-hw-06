@@ -579,6 +579,27 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscribe">
+          <p class="subscribe-title">Підпишіться на розсилку</p>
+          <form class="js-speaker-form">
+            <label for="subscrible-email"></label>
+            <input
+              class="subscribe-window"
+              type="email"
+              name="email"
+              id="subscrible-email"
+              placeholder="E-mail"
+              autocomplete="email"
+            />
+            <button class="subscribe-btn" type="submit">
+              Підписатися
+              <svg class="subsribe-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -591,8 +612,75 @@
             </svg>
           </button>
         </div>
+
+        <form class="form js-speaker-form">
+
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+
+          <div class="form-field">
+            <label for="name">Ім'я</label>
+            <input 
+            type="name" 
+            name="name" 
+            id="name" />
+          </div>
+
+          <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input 
+            type="tel" 
+            name="tel" 
+            id="tel" />
+          </div>
+
+          <div class="form-field">
+            <label for="mail">Пошта</label>
+            <input 
+            type="email" 
+            name="mail" 
+             id="mail" />
+          </div>
+
+          <div class="">
+            <label for="comments">Коментар</label>
+            <textarea
+              name="comments"
+              id="comments"
+              cols="30"
+              rows="10"
+              placeholder="Введіть текст"
+            ></textarea>
+          </div>
+
+          <div class="">
+            <input type="checkbox" />
+            <label for=""
+              >Погоджуюся з розсилкою та приймаю
+              <a href="">Умови договору</a></label
+            >
+          </div>
+
+          <button type="submit">Відправити</button>
+        </form>
       </div>
     </div>
+
     <script src="./js/modal.js"></script>
+
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
