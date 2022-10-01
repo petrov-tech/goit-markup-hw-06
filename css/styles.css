@@ -204,7 +204,9 @@ img {
 .icon-mail:hover,
 .icon-mail:focus,
 .icon-tell:hover,
-.icon-tell:focus {
+.icon-tell:focus,
+.adress-link:hover,
+.adress-link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -560,7 +562,7 @@ img {
 
 .contact-link {
   text-decoration-line: none;
-  transition: var(--time-duration) var(--cubic-bezier);
+  transition: color var(--time-duration) var(--cubic-bezier);
 }
 
 .contacts-link:not(:last-child) {
@@ -578,6 +580,8 @@ img {
   text-decoration-line: none;
 
   color: var(--background-main-color);
+    transition: color var(--time-duration) var(--cubic-bezier);
+
 }
 
 .contact-link {
