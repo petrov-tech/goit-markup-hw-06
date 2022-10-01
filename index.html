@@ -615,7 +615,7 @@
         </div>
 
         <!--форма  -->
-        <form class="form js-speaker-form" autocomplete="off">
+        <form class="form" autocomplete="off">
           <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
 
           <label class="form-field"
@@ -682,21 +682,5 @@
     </div>
 
     <script src="./js/modal.js"></script>
-
-    <!-- <script>
-      (() => {
-        document
-          .querySelector(".js-speaker-form")
-          .addEventListener("submit", (e) => {
-            e.preventDefault();
-
-            new FormData(e.currentTarget).forEach((value, name) =>
-              console.log(`${name}: ${value}`)
-            );
-
-            e.currentTarget.reset();
-          });
-      })();
-    </script> -->
   </body>
 </html>

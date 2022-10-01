@@ -535,7 +535,6 @@ img {
 
 .footer {
   background-color: var(--footer-backgound);
-  
 }
 
 .adress-box {
@@ -665,11 +664,13 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  outline: none;
+  transition: border var(--time-duration) var(--cubic-bezier);
 }
 
-.subscribe-window:focus-within {
+.subscribe-window:focus-within,
+.subscribe-window:hover {
   border: 1px solid var(--accent-color);
-  outline: 1px solid var(--accent-color);
 }
 
 .subscribe-window::placeholder {
@@ -695,6 +696,7 @@ img {
   background-color: var(--accent-color);
   color: var(--white-color);
 
+  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color var(--time-duration) var(--cubic-bezier);
 }
@@ -945,11 +947,13 @@ textarea {
 
   border: 1px solid #21212133;
   border-radius: 4px;
+  outline: none;
+
+  transition: border var(--time-duration) var(--cubic-bezier);
 }
 
 .form {
   padding: 40px;
-  
 }
 
 .modal-title {
@@ -976,7 +980,6 @@ textarea {
   cursor: pointer;
 
   color: var(--secondary-text-color);
-  
 }
 
 .icon {
@@ -985,7 +988,7 @@ textarea {
   top: 50%;
   cursor: pointer;
   fill: var(--primary-text-color);
-  /* transition: fill var(--time-duration) var(--cubic-bezier); */
+  transition: fill var(--time-duration) var(--cubic-bezier);
 }
 
 .form-input {
@@ -998,22 +1001,18 @@ textarea {
 
   border-radius: 4px;
   border: 1px solid #21212133;
-      transition:  var(--time-duration) var(--cubic-bezier);
-
+  outline: none;
+  transition: border var(--time-duration) var(--cubic-bezier);
 }
 
 .form-field:focus-within > .icon,
 .form-field:hover > .icon {
   fill: #2196f3;
-      transition:  var(--time-duration) var(--cubic-bezier);
-
 }
 
 .form-field:focus-within .form-input,
 .form-field:hover .form-input {
-  outline: 1px solid #2196f3;
-      transition:  var(--time-duration) var(--cubic-bezier);
-
+  border: 1px solid var(--accent-color);
 }
 
 .comments {
@@ -1026,14 +1025,12 @@ textarea {
   cursor: pointer;
 
   color: var(--secondary-text-color);
-  
 }
 
 .comment-box {
   margin-top: 4px;
   margin-bottom: 20px;
-    transition:  var(--time-duration) var(--cubic-bezier);
-
+  transition: var(--time-duration) var(--cubic-bezier);
 }
 
 .comment-box::placeholder {
@@ -1042,9 +1039,7 @@ textarea {
 
 .comments:hover .comment-box,
 .comments:focus-within .comment-box {
-  outline: 1px solid var(--accent-color);
-      transition:  var(--time-duration) var(--cubic-bezier);
-
+  border: 1px solid var(--accent-color);
 }
 
 /* Checkbox */
@@ -1124,4 +1119,3 @@ textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color var(--time-duration) var(--cubic-bezier);
 }
-
