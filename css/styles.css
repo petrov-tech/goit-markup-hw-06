@@ -535,6 +535,7 @@ img {
 
 .footer {
   background-color: var(--footer-backgound);
+  
 }
 
 .adress-box {
@@ -545,6 +546,7 @@ img {
   display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
+  justify-content: space-between;
 }
 
 .second {
@@ -633,8 +635,9 @@ img {
 }
 
 /* Footer subscribe */
+
 .subscribe {
-  margin-left: 93px;
+  margin-left: 70px;
 }
 
 .subscribe-title {
